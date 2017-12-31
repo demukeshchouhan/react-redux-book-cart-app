@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import cartAction from "../../actions";
+import * as bookAction from "../../actions/bookAction";
 import { Row, Col, Button } from "react-bootstrap";
 
 import BookItem from "./bookItem";
 import BooksForm from "./booksForm";
+import Cart from "./cart";
 
 
 class BooksList extends Component {
@@ -29,6 +30,9 @@ class BooksList extends Component {
 		<div>
 			<h1>BooksList</h1>
 			<Row>
+				<Cart />
+			</Row>
+			<Row>
 				<Col xs={12} sm={6}>
 					<BooksForm />
 				</Col>
@@ -46,7 +50,7 @@ const stateProps = (state) => ({
 });
 
 const disptachProps = (dispatch) => ({
-	actions : bindActionCreators(cartAction, dispatch)
+	actions : bindActionCreators(bookAction, dispatch)
 });
 
 

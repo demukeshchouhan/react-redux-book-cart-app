@@ -17,8 +17,7 @@ const initialState = {
         description : "some default description",
         price : 150
     }],
-    categories:[],
-    cart : {}
+    categories:[]
 };
 const bookReducer = (state=initialState, action) => {
     switch (action.type) {

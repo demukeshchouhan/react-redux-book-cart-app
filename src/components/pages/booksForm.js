@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import cartAction from "../../actions";
+import  * as bookAction from "../../actions/bookAction";
 import { findDOMNode } from "react-dom";
 import { Well, Panel, FormControl, FormGroup, ControlLabel, Row, Col, Button } from "react-bootstrap";
 
@@ -60,7 +60,7 @@ class BooksForm extends Component {
 // });
 
 const disptachProps = (dispatch) => ({
-	actions : bindActionCreators(cartAction, dispatch)
+	actions : bindActionCreators(bookAction, dispatch)
 });
 
 
